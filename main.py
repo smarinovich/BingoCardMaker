@@ -49,7 +49,7 @@ def print_card(card:str, cardNum:int):
   cmdLine = [["" for i in range(5)] for j in range(5)]
   for j in range(5):
     for k in range(5):
-      cmdLine[j][k] = f"\\newcommand{{\\Node{ALPHALIST[j]}{ALPHALIST[k]}}}{{\\textbf{{{str(card[k][j])}}}}}"
+      cmdLine[j][k] = f"\\newcommand{{\\Node{ALPHALIST[j]}{ALPHALIST[k]}}}{{\\textbf{{\\LARGE {str(card[k][j])}}}}}"
   fh = open("firsthalf", "r")
   sh = open("secondhalf", "r")
   out = open("bingoCard"+str(cardNum)+".tex", "w")
