@@ -1,0 +1,19 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{amscd, amssymb,amsmath}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{xstring}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\graphicspath{{./img/}}
+\emergencystretch=50pt
+\allowdisplaybreaks[2]
+
+\addtolength{\topmargin}{-5\baselineskip}
+\addtolength{\textheight}{9\baselineskip}
+\addtolength{\textwidth}{3cm}
+\addtolength{\oddsidemargin}{-15mm}
+\addtolength{\evensidemargin}{-15mm}
+\addtolength{\parskip}{3pt plus 1pt}
+
+\renewcommand{\theenumi}{\alph{enumi}}

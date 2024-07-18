@@ -1,0 +1,46 @@
+
+\newcommand{\Size}{2.5cm}
+\def\NumOfColumns{5}%
+\def\Sequence{1/A, 2/B, 3/C, 4/D, 5/E}
+
+\tikzset{Square/.style={
+    inner sep=0pt,
+    text width=\Size, 
+    minimum size=\Size,
+    draw=black,
+    fill=yellow!20,
+    align=center
+    }
+}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{center}
+
+    \medskip
+    {\large\bf KANANGA BINGO}
+
+
+    \bigskip
+    \medskip
+    {\includegraphics[scale=0.2]{kanangaLogo}}
+
+
+
+
+
+    \bigskip
+    \medskip
+
+    \begin{tikzpicture}[draw=black, ultra thick, x=\Size,y=\Size]
+        \foreach \col/\colLetter in \Sequence {%
+            \foreach \row/\rowLetter in \Sequence{%
+                \pgfmathtruncatemacro{\value}{\col+\NumOfColumns*(\row-1)}
+                \def\NodeText{\expandafter\csname Node\rowLetter\colLetter\endcsname}
+                \node [Square] at ($(\col,-\row)-(0.5,0.5)$) {\NodeText};
+            }
+        }
+    \end{tikzpicture}
+\end{center}
+\end{document}
