@@ -5,7 +5,7 @@
 
 \tikzset{Square/.style={
     inner sep=0pt,
-    text width=\Size, 
+    text width=\Size + 1, 
     minimum size=\Size,
     draw=black,
     fill=yellow!20,
