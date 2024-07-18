@@ -1,5 +1,5 @@
 # BingoCardMaker
-A tool I used to generate bingo cards for my Rovers.
+A tool I made to help generator Bingo Cards for my Rover's Fundrasier.
 
 # Dependencies
 This has been written for Linux (ubuntu). You will need:
