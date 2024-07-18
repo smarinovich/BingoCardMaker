@@ -1,4 +1,6 @@
 import random
+from pypdf import PdfMerger
+import os
 
 ALPHALIST = ['A','B','C','D','E']
 
@@ -8,12 +10,22 @@ def main():
     card = generate_nums()
     print_card(card, i)
     #print_nums(card) # included for testing
+
+  # merge pdfs
+  merger = PdfMerger()
+  for i in range(num_cards):
+    os.system("pdflatex bingoCard"+str(i)+".tex")
+    merger.append("bingoCard"+str(i)+".pdf")
+  merger.write("allCards.pdf")
+  merger.close()
+
+  # clean up all remaining files
+  os.system("rm bingoCard*")
   
 def get_cardnums():
   while True:
-    GET_CARDNUMS = int(input('Enter the number of Bingo cards to generate (1-10): '))
-    if GET_CARDNUMS <= 10:
-      return GET_CARDNUMS
+    GET_CARDNUMS = int(input('Enter the number of Bingo cards to generate: '))
+    return GET_CARDNUMS
 
     
 
