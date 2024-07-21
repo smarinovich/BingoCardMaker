@@ -35,6 +35,11 @@ def generate_nums():
   N = random.sample(range(31, 46), 5)
   G = random.sample(range(46, 61), 5)
   O = random.sample(range(61, 76), 5)
+  B.sort()
+  I.sort()
+  N.sort()
+  G.sort()
+  O.sort()
   return [B,I,N,G,O]
 
 def print_nums(card):
